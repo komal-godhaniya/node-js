@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(250, 243, 153);
+    }
+
+    #main-div {
+        height: auto;
+        width: 80%;
+        padding: 20px;
+        border: 1px solid transparent;
+        background-color: rgb(226, 95, 100);
+        display: flex;
+        border-radius: 20px;
+        flex-direction: column;
+    }
+
+    #main-div {
+        button {
+            height: 45px;
+            width: 20%;
+            border-radius: 10px;
+            margin-left: 40%;
+            background-color: rgb(250, 243, 153);
+            color: black;
+            border: 1px solid transparent;
+            font-size: 15px;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .text h1 {
+            margin: 8px;
+            margin-left: 35px;
+        }
+
+        #parts {
+            height: auto;
+            border: 1px solid transparent;
+            flex-wrap: wrap;
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+        }
+
+        #parts .part {
+            height: 220px;
+            width: 18.5%;
+            margin: 10px;
+            background-color: rgb(244, 244, 244);
+        }
+
+        #parts .part img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div id="main-div">
+        <div class="text">
+            <h1><b>Book Store</b> <small style="color: white;">(shop by genre)</small></h1>
+        </div>
+        <div id="parts">
+            <div class="part">
+                <a href="/classic">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/newhalobx24/classics._CB554848836_.png"
+                        alt="">
+                </a>
+            </div>
+            <div class="part">
+                <a href="/business">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/SeptBB2024/Rectangle-6._CB565003705_.png"
+                        alt="">
+                </a>
+            </div>
+            <div class="part">
+                <a href="/fantacy">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/newhalobx24/fantasy._CB554848836_.png"
+                        alt="">
+                </a>
+            </div>
+            <div class="part">
+                <a href="/comics">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/newhalobx24/comics._CB554848836_.png"
+                        alt="">
+                </a>
+            </div>
+            <div class="part">
+                <a href="/fiction">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/newhalobx24/literature._CB554848836_.png"
+                        alt="">
+                </a>
+            </div>
+            <div class="part">
+                <a href="/bio">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/newhalobx24/biographies._CB554848836_.png"
+                        alt="">
+                </a>
+            </div>
+            <div class="part">
+                <a href="/self">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/newhalobx24/selfhelp._CB554848836_.png"
+                        alt="">
+                </a>
+            </div>
+            <div class="part">
+                <a href="/romance">
+                    <img src="https://m.media-amazon.com/images/G/31/img21/Books/newhalobx24/romance._CB554848836_.png"
+                        alt="">
+                </a>
+            </div>
+        </div>
+
+        <button>
+            <a href="/addData">
+                add your book
+            </a>
+        </button>
+    </div>
+</body>
+
+</html>
