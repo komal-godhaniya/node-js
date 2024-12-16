@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantacy Books</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(250, 243, 153);
+    }
+
+    #main_book_div {
+        height: auto;
+        width: 80%;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 10px;
+        background-color: rgb(226, 95, 100);
+    }
+
+    .book_div {
+        height: auto;
+        width: 25%;
+        border: 1px solid rgb(224, 224, 224);
+        margin-top: 15px;
+        transition-duration: .7s;
+        transition-timing-function: ease-in-out;
+        cursor: pointer;
+        margin: 15px;
+        background-color: white;
+    }
+
+    .book_div:hover {
+        border: 1px solid black;
+    }
+
+    .book_div div {
+        height: 280px;
+        border: 1px solid transparent;
+        display: flex;
+        justify-content: center;
+    }
+
+    .book_div div img {
+        height: 90%;
+        margin-top: 5%;
+        width: auto;
+    }
+    .book_div button{
+        height: 35px;
+        margin: 5px;
+        width: 45%;
+        margin-bottom: 15px;
+    }
+    .book_div h3,
+    p,
+    h4,
+    h6 {
+        margin: 9px;
+
+    }
+
+    .book_div p {
+        color: grey;
+    }
+
+    .book_div h4 {
+        color: rgb(206, 3, 3);
+    }
+
+    #home {
+        padding: 15px 25px;
+        width: 200px;
+        border-radius: 15px;
+        cursor: pointer;
+        background-color: rgb(226, 95, 100);
+        border: none;
+    }
+
+    button a {
+        color: black;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <h1>Fantacy Books</h1>
+    <div id="main_book_div">
+        <% books.filter(book=> { %>
+            <% if("fantacy" == book.category ){ %>
+            <div class="book_div">
+                <div>
+                    <img src="<%= book.image %>" alt="<%= book.name %>">
+                </div>
+                <h3>
+                    <%= book.name %>
+                </h3>
+                <p>
+                    <%= book.author %>
+                </p>
+                <h6>
+                    <%= book.publishedyear %>
+                </h6>
+                <h4>
+                    <%= book.price %>
+                </h4>
+                <button><a href="/deleteData?id=<%= book.id %>">Delete</a></button>
+                <button><a href="/editData/<%= book.id %>">Edit</a></button>
+            </div>
+            <%}%>
+        <% }) %>
+
+
+
+    </div>
+
+    <button id="home">
+        <a href="/"> <-- Go Back to Home</a>
+    </button>
+</body>
+
+</html>

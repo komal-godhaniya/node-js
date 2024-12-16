@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>express</title>
+</head>
+<body>
+     <center>
+        <h1>Welcome to Express JS</h1>
+
+        <form action="/addData" method="post">
+            <input type="text" placeholder="Enter Your Name" name="name">
+            <input type="text" placeholder="Enter Your Subject" name="subject">
+            <input type="text" placeholder="Enter Your City" name="city">
+            <button type="submit">Add Data</button>
+        </form>
+
+        <table width="80%" border="1px">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Subject</td>
+                <td colspan="2">Action</td>
+            </tr>
+            <%students.map((e,i)=>{%>
+                <tr>
+                    <td><%=e.id%></td>
+                    <td><%=e.name%></td>
+                    <td><%=e.subject%></td>
+                    <td>
+                        <button><a href="/editData/<%=e.id%>">Edit</a></button>
+                    </td>
+                    <td>
+                        <button><a href="/deleteData?id=<%=e.id%>">Delete</a></button>
+                    </td>
+                </tr>
+            <%})%>
+        </table>
+     </center>
+</body>
+</html>
