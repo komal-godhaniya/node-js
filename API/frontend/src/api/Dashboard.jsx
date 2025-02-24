@@ -60,10 +60,13 @@ export default function Dashboard() {
       <div className="container-fluid" id='account_main_div'>
         
         <div>
-            <input type="text" place/>
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+            <input type="text" placeholder='Enter Your Task'/>
+            <select name="" id="">
+              <option value="">Priority</option>
+              <option value="">High</option>
+              <option value="">Low</option>
+            </select>
+            <button>Add</button>
         </div>
 
      
